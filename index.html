@@ -528,6 +528,17 @@
             </li>
           </ul>
         </div>
+
+        <div class="box-sbscrb">
+          <b>Подпишитесь на рассылку</b>
+          <form action="" class="form-ftr">
+            <div class="form-sbscrb">
+              <label for="email" class="form-label"></label>
+              <input type="email" name="email" id="email" placeholder="E-mail" autocomplete="on" />
+            </div>
+            <button class="order-button" type="submit">Подписаться</button>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -540,7 +551,52 @@
             <use href="./images/svg/close-black.svg#icon-close-black"></use>
           </svg>
         </button>
-        <p></p>
+
+        <!-- Modal Form -->
+
+        <form action="" class="form-mdl">
+          <b class="form-txt">Оставьте свои данные, мы вам перезвоним</b>
+
+          <div class="form-field">
+            <label for="name" class="form-label">Имя</label>
+            <input
+              class="form-input"
+              type="text"
+              name="name"
+              id="name"
+              style="height: 40px"
+              placeholder=""
+              autofocus
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="phone" class="form-label">Телефон</label>
+            <input type="tel" name="phone" id="phone" />
+          </div>
+
+          <div class="form-field">
+            <label for="mail" class="form-label">Почта</label>
+            <input type="email" name="email" id="mail" autocomplete="on" />
+          </div>
+
+          <div class="form-field">
+            <label for="feedback" class="form-label">Комментарий</label>
+            <textarea name="feedback" id="feedback" placeholder="Введите текст"></textarea>
+          </div>
+
+          <div class="form-chckbx">
+            <input type="checkbox" name="usr-agr" id="usr-agr" />
+            <label for="usr-agr" class="form-label"
+              >Соглашаюсь с рассылкой и принимаю
+              <span>
+                <a href="">Условия договора</a>
+              </span>
+            </label>
+          </div>
+
+          <button class="order-button" type="submit">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

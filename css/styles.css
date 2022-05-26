@@ -265,6 +265,7 @@ address {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 
+  min-width: 200px;
   align-items: center;
   text-align: center;
   display: inline-block;
@@ -579,6 +580,7 @@ address {
   margin-right: 70px;
 }
 .follow-us {
+  font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -607,6 +609,41 @@ address {
 .link.social-netwrk:hover,
 .link.social-netwrk:focus {
   background-color: var(--accent-color);
+}
+.box-sbscrb {
+  display: block;
+  margin-left: 93px;
+}
+.box-sbscrb b {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+.form-ftr {
+  display: flex;
+  margin-top: 20px;
+}
+.form-sbscrb {
+  display: flex;
+}
+.form-sbscrb input {
+  width: 358px;
+  margin-right: 12px;
+  padding-left: 15px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  background-color: var(--footer-bgc);
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
 }
 
 /* Portfolio */
@@ -752,9 +789,9 @@ address {
   top: 50%;
   left: 50%;
 
-  min-width: 528px;
-  min-height: 581px;
-  padding: 15px;
+  width: 528px;
+  height: 581px;
+  padding: 40px;
 
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
@@ -785,4 +822,74 @@ address {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--basic-backgroud-color);
+}
+
+/* Form - Modal */
+
+.form-mdl {
+  height: 100%;
+  padding: 0;
+  text-align: center;
+}
+.form-mdl b {
+  display: block;
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+.form-label {
+  margin-bottom: 4px;
+  text-align: left;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+}
+.form-field input {
+  height: 40px;
+  color: var(--primary-text-color);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.form-mdl textarea {
+  resize: none;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.form-chckbx {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: fit-content;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form-chckbx label {
+  margin-left: 7px;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+.form-chckbx span {
+  text-decoration-line: underline;
+  color: var(--accent-color);
 }
