@@ -289,6 +289,7 @@
 
     <footer class="footer">
       <!--Футер - Наши контакты-->
+
       <div class="common container">
         <div class="address">
           <a class="studio-logo link" href="./index.html"
@@ -352,16 +353,27 @@
           </ul>
         </div>
 
-        <div class="box-sbscrb">
+        <form action="" class="form-ftr">
           <b>Подпишитесь на рассылку</b>
-          <form action="" class="form-ftr">
-            <div class="form-sbscrb">
-              <label for="email" class="form-label"></label>
-              <input type="email" name="email" id="email" placeholder="E-mail" autocomplete="on" />
-            </div>
-            <button class="order-button" type="submit">Подписаться</button>
-          </form>
-        </div>
+
+          <div class="sbscrb-container">
+            <label class="form-label sbscrb">
+              <input
+                class="sbscrb-input"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                autocomplete="on"
+              />
+            </label>
+            <button class="order-button sbscrb" type="submit">
+              <span class="sbscrb-icon">Подписаться</span>
+              <svg class="sbscrb-svg">
+                <use href="./images/svg/webstudio-icons-v-2-0-raw.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
     <script src="./js/modal.js"></script>

@@ -68,7 +68,6 @@
 
       <section class="principal-section overlay">
         <div class="container">
-          <!--Рекламный баннер и афиша (блок-герой)-->
           <h1 class="principal-section-title">
             Эффективные решения <br />
             для вашего бизнеса <br />
@@ -529,16 +528,27 @@
           </ul>
         </div>
 
-        <div class="box-sbscrb">
+        <form action="" class="form-ftr">
           <b>Подпишитесь на рассылку</b>
-          <form action="" class="form-ftr">
-            <div class="form-sbscrb">
-              <label for="email" class="form-label"></label>
-              <input type="email" name="email" id="email" placeholder="E-mail" autocomplete="on" />
-            </div>
-            <button class="order-button" type="submit">Подписаться</button>
-          </form>
-        </div>
+
+          <div class="sbscrb-container">
+            <label class="form-label sbscrb">
+              <input
+                class="sbscrb-input"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                autocomplete="on"
+              />
+            </label>
+            <button class="order-button sbscrb" type="submit">
+              <span class="sbscrb-icon">Подписаться</span>
+              <svg class="sbscrb-svg">
+                <use href="./images/svg/webstudio-icons-v-2-0-raw.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
 
@@ -547,8 +557,8 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button data-modal-close class="mdl-close">
-          <svg class="link-icon close">
-            <use href="./images/svg/close-black.svg#icon-close-black"></use>
+          <svg class="link-icon close" width="18px" height="18px">
+            <use href="./images/svg/webstudio-icons-v-2-0-raw.svg#icon-close-black-18dp"></use>
           </svg>
         </button>
 
@@ -557,43 +567,61 @@
         <form action="" class="form-mdl">
           <b class="form-txt">Оставьте свои данные, мы вам перезвоним</b>
 
-          <div class="form-field">
-            <label for="name" class="form-label">Имя</label>
+          <label class="form-field">
             <input
               class="form-input"
               type="text"
               name="name"
-              id="name"
-              style="height: 40px"
-              placeholder=""
+              placeholder="Neo Anderson"
               autofocus
             />
-          </div>
+            <span class="form-label">Имя</span>
+            <span class="form-icon">
+              <svg class="form-svg">
+                <use href="./images/svg/webstudio-icons-v-2-0-raw.svg#icon-person-black-18dp"></use>
+              </svg>
+            </span>
+          </label>
 
-          <div class="form-field">
-            <label for="phone" class="form-label">Телефон</label>
-            <input type="tel" name="phone" id="phone" />
-          </div>
+          <label class="form-field">
+            <input class="form-input" type="tel" name="phone" placeholder="+1 418 7777777 " />
+            <span class="form-label">Телефон</span>
+            <span class="form-icon">
+              <svg class="form-svg">
+                <use href="./images/svg/webstudio-icons-v-2-0-raw.svg#icon-phone-black-18dp"></use>
+              </svg>
+            </span>
+          </label>
 
-          <div class="form-field">
-            <label for="mail" class="form-label">Почта</label>
-            <input type="email" name="email" id="mail" autocomplete="on" />
-          </div>
+          <label class="form-field">
+            <input
+              class="form-input"
+              type="email"
+              name="email"
+              placeholder="matrix@wb.com"
+              autocomplete="on"
+            />
+            <span class="form-label">Почта</span>
+            <span class="form-icon">
+              <svg class="form-svg">
+                <use href="./images/svg/webstudio-icons-v-2-0-raw.svg#icon-email-black-18dp"></use>
+              </svg>
+            </span>
+          </label>
 
-          <div class="form-field">
-            <label for="feedback" class="form-label">Комментарий</label>
-            <textarea name="feedback" id="feedback" placeholder="Введите текст"></textarea>
-          </div>
+          <label class="form-field">
+            <textarea name="feedback" placeholder="Введите текст"></textarea>
+            <span class="form-label"> Комментарий </span>
+          </label>
 
-          <div class="form-chckbx">
-            <input type="checkbox" name="usr-agr" id="usr-agr" />
-            <label for="usr-agr" class="form-label"
-              >Соглашаюсь с рассылкой и принимаю
-              <span>
-                <a href="">Условия договора</a>
-              </span>
-            </label>
-          </div>
+          <label class="form-field chckbx">
+            <input class="checkbox" type="checkbox" name="usr-agr" value="agr" />
+            Соглашаюсь с рассылкой и принимаю
+            <span class="checkbox-agr">
+              <a class="arg-link" href="">Условия договора</a>
+            </span>
+            <span class="checkbox-icon"></span>
+          </label>
 
           <button class="order-button" type="submit">Отправить</button>
         </form>

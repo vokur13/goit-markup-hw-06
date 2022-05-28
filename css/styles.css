@@ -41,15 +41,6 @@
   --dropbox-bgc: rgba(0, 0, 0, 0.1);
   --modal-bgc: #ffffff;
 }
-/* html {
-  box-sizing: border-box;
-}
-*,
-::before,
-::after {
-  box-sizing: inherit;
-} */
-/* Для элемента <body> задано свойство font-family с доминантным на макете шрифтом Roboto. */
 body {
   font-family: 'Roboto', 'Tahoma', sans-serif;
   font-style: normal;
@@ -117,7 +108,7 @@ address {
   overflow: hidden;
 }
 
-/* Header */
+/* ------------Header------------ */
 
 .brd {
   border-bottom: 1px solid var(--header-border-color);
@@ -243,7 +234,7 @@ address {
   color: var(--accent-color);
 }
 
-/* Principal section - Hero */
+/* ------------Principal section - Hero------------ */
 
 .principal-section-title {
   font-weight: 900;
@@ -254,6 +245,7 @@ address {
   color: var(--white-color);
 }
 .order-button {
+  position: relative;
   background: var(--accent-color);
   font-family: inherit;
   font-style: normal;
@@ -293,7 +285,7 @@ address {
   text-align: center;
 }
 
-/* Features - Наши преимущества*/
+/* ------------Features - Наши преимущества------------ */
 
 .section.features {
   padding-top: 94px;
@@ -353,7 +345,7 @@ address {
   height: 70px;
 }
 
-/* Tools */
+/* ------------ Tools ------------ */
 
 .profile {
   padding-bottom: 94px;
@@ -397,7 +389,7 @@ address {
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-/* Our Team */
+/* ------------ Our Team ------------ */
 
 .section.team {
   background-color: var(--background-color);
@@ -489,7 +481,7 @@ address {
   margin-right: 10px;
 }
 
-/* Our Clients */
+/* ------------ Our Clients ------------ */
 
 .section.clients {
   padding-top: 94px;
@@ -535,7 +527,7 @@ address {
   height: 60px;
 }
 
-/* Footer */
+/* ------------ Our Clients ------------ */
 
 .footer {
   padding-top: 60px;
@@ -604,7 +596,7 @@ address {
 
   background-color: #ffffff1a;
   fill: var(--white-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-func);
 }
 .link.social-netwrk:hover,
 .link.social-netwrk:focus {
@@ -614,7 +606,12 @@ address {
   display: block;
   margin-left: 93px;
 }
-.box-sbscrb b {
+.form-ftr {
+  display: block;
+  margin-left: 93px;
+  margin-top: 20px;
+}
+.form-ftr b {
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -622,17 +619,16 @@ address {
   text-transform: uppercase;
   color: var(--white-color);
 }
-.form-ftr {
+.sbscrb-container {
   display: flex;
   margin-top: 20px;
 }
-.form-sbscrb {
-  display: flex;
-}
-.form-sbscrb input {
+.form-label.sbscrb {
   width: 358px;
+  height: 50px;
   margin-right: 12px;
   padding-left: 15px;
+  margin-bottom: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: calc(20 / 16);
@@ -645,8 +641,28 @@ address {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 }
+.sbscrb-input {
+  background-color: inherit;
+  width: 100%;
+  color: var(--white-color);
+  appearance: none;
+  border: none;
+}
+/* .form-label.sbscrb:focus-within .sbscrb-input {
+  border: none;
+  appearance: none;
+} */
+.sbscrb-icon {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 0;
+}
+.sbscrb-svg {
+  width: 24px;
+  height: 24px;
+}
 
-/* Portfolio */
+/* ------------ Portfolio ------------ */
 
 .portfolio {
   padding-top: 94px;
@@ -765,7 +781,7 @@ address {
   border-right: 1px solid var(--minor-bgc);
 }
 
-/* Backdrop Modal*/
+/* ------------ Backdrop Modal ------------ */
 
 .backdrop {
   position: fixed;
@@ -822,9 +838,16 @@ address {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--basic-backgroud-color);
+  color: var(--black-color);
+  fill: currentColor;
+  transition: fill 250ms var(--timing-func);
+}
+.mdl-close:hover,
+.mdl-close:focus {
+  fill: var(--accent-color);
 }
 
-/* Form - Modal */
+/* ------------ Form - Modal ------------ */
 
 .form-mdl {
   height: 100%;
@@ -842,6 +865,12 @@ address {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 10px;
+}
 .form-label {
   margin-bottom: 4px;
   text-align: left;
@@ -850,16 +879,17 @@ address {
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
 }
-.form-field input {
+.form-input {
   height: 40px;
+  padding-left: 42px;
   color: var(--primary-text-color);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  appearance: none;
 }
-.form-field {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
+.form-field:focus-within > .form-input {
+  border: 1px solid var(--accent-color);
+  appearance: none;
 }
 .form-mdl textarea {
   resize: none;
@@ -870,26 +900,79 @@ address {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
-.form-chckbx {
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  display: inline-block;
+  color: var(--black-color);
+  fill: currentColor;
+  transition: fill 250ms var(--timing-func);
+}
+.form-svg {
+  width: 18px;
+  height: 18px;
+}
+.form-field:focus-within > .form-icon {
+  fill: var(--accent-color);
+}
+.chckbx {
   display: flex;
+  flex-direction: row;
+  justify-content: end;
   align-items: center;
-  flex-wrap: nowrap;
-  width: fit-content;
-  margin-top: 20px;
-  margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-}
-.form-chckbx label {
-  margin-left: 7px;
-  margin-bottom: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  width: 423px;
+
+  font-family: 'Roboto';
+  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
-.form-chckbx span {
+.checkbox {
+  position: absolute;
+  appearance: none;
+
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.arg-link {
   text-decoration-line: underline;
   color: var(--accent-color);
+  margin-left: 4px;
+}
+.checkbox-icon {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  display: inline-block;
+  margin-right: 8px;
+  width: 16px;
+  height: 15px;
+  background-image: url('../images/svg/icon-unchecked.svg');
+  background-position: center;
+  background-size: contain;
+  background-origin: content-box;
+  transition: background-color 250ms var(--timing-func), background-image 250ms var(--timing-func);
+}
+.checkbox:checked ~ .checkbox-icon {
+  background-color: var(--accent-color);
+  background-image: url('../images/svg/icon-check.svg');
+  background-position: center;
+  background-size: contain;
+  border-radius: 2px;
 }
