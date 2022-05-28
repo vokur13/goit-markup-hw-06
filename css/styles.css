@@ -647,7 +647,8 @@ address {
   border: none;
 }
 .form-label.sbscrb:focus-within > .sbscrb-input {
-  border: none;
+  outline: 0;
+  outline-offset: 0;
 }
 .order-button.sbscrb {
   display: flex;
@@ -887,7 +888,14 @@ address {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
-.form-mdl textarea {
+.form-field:focus-within .form-input,
+.form-field:focus-within .textarea {
+  outline: 0;
+  outline-offset: 0;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+}
+.form-field textarea {
   resize: none;
   width: 100%;
   height: 120px;
