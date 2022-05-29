@@ -353,27 +353,29 @@
           </ul>
         </div>
 
-        <form action="" class="form-ftr">
-          <b>Подпишитесь на рассылку</b>
+        <div class="sbscrb-container">
+          <p>Подпишитесь на рассылку</p>
 
-          <div class="sbscrb-container">
+          <form action="javascript:void(0);" class="form-ftr">
             <label class="form-label sbscrb">
               <input
                 class="sbscrb-input"
+                action="#"
                 type="email"
                 name="email"
                 placeholder="E-mail"
-                autocomplete="on"
+                autocomplete="off"
               />
             </label>
+
             <button class="order-button sbscrb" type="submit">
               <span class="sbscrb-icon">Подписаться</span>
               <svg class="sbscrb-svg">
                 <use href="./images/svg/webstudio-icons-v-2-0-raw.svg#icon-send"></use>
               </svg>
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </footer>
     <script src="./js/modal.js"></script>

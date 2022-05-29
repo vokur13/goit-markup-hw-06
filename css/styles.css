@@ -601,15 +601,12 @@ address {
 .link.social-netwrk:focus {
   background-color: var(--accent-color);
 }
-.box-sbscrb {
+.sbscrb-container {
   display: block;
-  margin-left: 93px;
+  margin-left: auto;
 }
-.form-ftr {
-  display: block;
-  margin-left: 93px;
-}
-.form-ftr b {
+.sbscrb-container p {
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -617,10 +614,10 @@ address {
   text-transform: uppercase;
   color: var(--white-color);
 }
-.sbscrb-container {
+.form-ftr {
   display: flex;
-  margin-top: 20px;
 }
+
 .form-label.sbscrb {
   width: 358px;
   height: 50px;
@@ -662,12 +659,6 @@ address {
   width: 24px;
   height: 24px;
 }
-/* .sbscrb {
-  opacity: 0.6;
-}
-.sbscrb-input::placeholder {
-  color: red;
-} */
 
 /* ------------ Portfolio ------------ */
 
@@ -852,6 +843,7 @@ address {
 .mdl-close:hover,
 .mdl-close:focus {
   fill: var(--accent-color);
+  cursor: pointer;
 }
 
 /* ------------ Form - Modal ------------ */
@@ -974,16 +966,26 @@ address {
   margin-right: 8px;
   width: 16px;
   height: 15px;
-  background-image: url('data:image/svg+xml,%3Csvg width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M14.222 1.667v11.666H1.778V1.667h12.444Zm0-1.667H1.778C.8 0 0 .75 0 1.667v11.666C0 14.25.8 15 1.778 15h12.444C15.2 15 16 14.25 16 13.333V1.667C16 .75 15.2 0 14.222 0Z" fill="%23212121"/%3E%3C/svg%3E');
+  background-image: url('../images/svg/icon-unchecked.svg');
   background-position: center;
   background-size: contain;
   background-origin: content-box;
+  color: #2196f3;
+  fill: currentColor
   transition: background-color 250ms var(--timing-func), background-image 250ms var(--timing-func);
 }
+.checkbox:focus-within ~ .checkbox-icon {
+  background-image: url('../images/svg/checkbox-focus-blue.svg');
+  background-position: center;
+  background-size: contain;
+  background-origin: content-box;
+}
 .checkbox:checked ~ .checkbox-icon {
+  /* fill: var(--accent-color) */
   background-color: var(--accent-color);
-  background-image: url('data:image/svg+xml,%3Csvg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="m2.957 7.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z" fill="%23fff" stroke="%23fff" stroke-width=".2"/%3E%3C/svg%3E');
+  background-image: url('../images/svg/icon-check.svg');
   background-position: center;
   background-size: contain;
   border-radius: 2px;
 }
+
