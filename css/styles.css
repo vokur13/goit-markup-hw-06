@@ -602,7 +602,8 @@ address {
   background-color: var(--accent-color);
 }
 .sbscrb-container {
-  display: block;
+  min-width: 570px;
+  margin-right: 0;
   margin-left: auto;
 }
 .sbscrb-container p {
@@ -619,10 +620,10 @@ address {
 }
 
 .form-label.sbscrb {
-  width: 358px;
+  display: block;
+  width: 100%;
   height: 50px;
-  margin-right: 12px;
-  padding-left: 15px;
+  /* margin-right: 12px; */
   margin-bottom: 0;
   font-weight: 400;
   font-size: 16px;
@@ -632,21 +633,34 @@ address {
   letter-spacing: 0.03em;
   background-color: var(--footer-bgc);
   color: rgba(255, 255, 255, 0.6);
+  /* border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px; */
+}
+.sbscrb-input {
+  display: block;
+  width: 358px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  margin-right: 12px;
+
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-}
-.sbscrb-input {
+
   background-color: inherit;
-  width: 100%;
   color: var(--white-color);
-  border: none;
 }
 .form-label.sbscrb:focus-within > .sbscrb-input {
   outline: 0;
   outline-offset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
 }
 .order-button.sbscrb {
+  padding: 10px 28px;
   display: flex;
   align-items: center;
 }
@@ -658,6 +672,15 @@ address {
 .sbscrb-svg {
   width: 24px;
   height: 24px;
+}
+.order-button.sbscrb {
+  opacity: 0.6;
+  transition: opacity 250ms var(--timing-func);
+}
+.sbscrb-input:not(:placeholder-shown) + .order-button.sbscrb {
+  outline: 0;
+  outline-offset: 0;
+  opacity: 1;
 }
 
 /* ------------ Portfolio ------------ */
@@ -916,7 +939,8 @@ address {
   width: 18px;
   height: 18px;
 }
-.form-field:focus-within > .form-icon {
+.form-field:focus-within > .form-icon,
+.form-field:hover > .form-icon {
   fill: var(--accent-color);
 }
 .chckbx {
@@ -954,9 +978,19 @@ address {
   overflow: hidden;
 }
 .arg-link {
+  outline: 0;
+  outline-offset: 0;
   text-decoration-line: underline;
   color: var(--accent-color);
   margin-left: 4px;
+}
+.checkbox-agr {
+  opacity: 0.6;
+  transition: opacity 250ms var(--timing-func);
+}
+.checkbox:focus-within + .checkbox-agr,
+.checkbox:hover + .checkbox-agr {
+  opacity: 1;
 }
 .checkbox-icon {
   position: absolute;
@@ -966,26 +1000,32 @@ address {
   margin-right: 8px;
   width: 16px;
   height: 15px;
-  background-image: url('../images/svg/icon-unchecked.svg');
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.222 1.667v11.666H1.778V1.667h12.444Zm0-1.667H1.778C.8 0 0 .75 0 1.667v11.666C0 14.25.8 15 1.778 15h12.444C15.2 15 16 14.25 16 13.333V1.667C16 .75 15.2 0 14.222 0Z'/%3E%3C/svg%3E");
   background-position: center;
   background-size: contain;
   background-origin: content-box;
-  color: #2196f3;
-  fill: currentColor
   transition: background-color 250ms var(--timing-func), background-image 250ms var(--timing-func);
 }
 .checkbox:focus-within ~ .checkbox-icon {
-  background-image: url('../images/svg/checkbox-focus-blue.svg');
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.222 1.667v11.666H1.778V1.667h12.444Zm0-1.667H1.778C.8 0 0 .75 0 1.667v11.666C0 14.25.8 15 1.778 15h12.444C15.2 15 16 14.25 16 13.333V1.667C16 .75 15.2 0 14.222 0Z' fill='%232196F3'/%3E%3C/svg%3E");
   background-position: center;
   background-size: contain;
   background-origin: content-box;
 }
 .checkbox:checked ~ .checkbox-icon {
-  /* fill: var(--accent-color) */
   background-color: var(--accent-color);
-  background-image: url('../images/svg/icon-check.svg');
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m2.957 7.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z' fill='%23fff' stroke='%23fff' stroke-width='.2'/%3E%3C/svg%3E");
   background-position: center;
   background-size: contain;
   border-radius: 2px;
 }
-
+.order-button.agr {
+  opacity: 0.6;
+  transition: opacity 250ms var(--timing-func);
+}
+.order-button.agr:focus,
+.order-button.agr:hover {
+  outline: 0;
+  outline-offset: 0;
+  opacity: 1;
+}
