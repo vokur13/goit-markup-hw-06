@@ -777,9 +777,8 @@ address {
 }
 .card-label {
   padding: 20px 24px;
-  border-bottom: 1px solid var(--minor-bgc);
-  border-left: 1px solid var(--minor-bgc);
-  border-right: 1px solid var(--minor-bgc);
+  border: 1px solid var(--minor-bgc);
+  border-top: none;
 }
 
 /* ------------ Backdrop Modal ------------ */
