@@ -889,11 +889,14 @@ address {
   transition: border 250ms var(--timing-func);
 }
 .form-field:focus-within .form-input,
-.form-field:focus-within .textarea {
+.form-field:focus-within .textarea,
+.form-field:hover .form-input,
+.form-field:hover .textarea {
   outline: 0;
   outline-offset: 0;
   border: 1px solid var(--accent-color);
   border-radius: 4px;
+  cursor: pointer;
 }
 .textarea {
   resize: none;
@@ -970,6 +973,7 @@ address {
 .checkbox:focus-within + .checkbox-agr,
 .checkbox:hover + .checkbox-agr {
   opacity: 1;
+  cursor: pointer;
 }
 .checkbox-icon {
   position: absolute;
@@ -991,6 +995,7 @@ address {
   background-position: center;
   background-size: contain;
   background-origin: content-box;
+  cursor: pointer;
 }
 .checkbox:checked ~ .checkbox-icon {
   background-color: var(--accent-color);
@@ -1008,4 +1013,5 @@ address {
   outline: 0;
   outline-offset: 0;
   opacity: 1;
+  cursor: pointer;
 }
